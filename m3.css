@@ -1,0 +1,160 @@
+
+
+
+nav {
+    display: flex;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  body {
+    margin: 66px 0 0 0;
+    padding: 0;
+  }
+
+  .top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 20;
+  }
+
+  .logo {
+    height: 66px;
+    display: inline-block;
+  }
+
+  .logo a {
+    display: inline-block;
+    line-height: 66px;
+  }
+
+  .logo img {
+    vertical-align: middle;
+  }
+
+  .main-menu {
+    display: none;
+  }
+
+  #burger, .x-close {
+    display: none;
+
+  }
+
+  .burger-menu:after {
+
+    font-family: 'icomoon';
+    speak: none;
+    color: #474747;
+    content: '\e9bd';
+    margin-right: 10px;
+    font-size: 35px;
+  }
+
+  .x-close:after {
+
+    font-family: 'icomoon';
+    speak: none;
+    color: #474747;
+    content: '\ea0f';
+    margin-right: 10px;
+    font-size: 35px;
+
+  }
+
+  .logo-first-li {
+    display: none;
+  }
+
+  nav > a {
+    padding-top: 20px;
+    padding-left: 3%;
+  }
+
+  nav {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    list-style: none;
+  }
+
+  nav ul li {
+    padding: 2px 3px;
+
+  }
+
+  header label {
+    display: inline-block;
+    float: right;
+    line-height: 66px;
+    font-size: 1.5rem;
+  }
+
+  input[type=checkbox]:checked ~ label .x-close {
+    display: inline-block;
+  }
+
+  input[type=checkbox]:checked ~ label .burger-menu {
+    display: none;
+  }
+
+  input[type=checkbox]:checked ~ ul {
+    display: block;
+  }
+
+  input[type=checkbox]:checked ~ ul ul {
+    display: block;
+  }
+
+  .main-menu ul {
+    list-style: none;
+  }
+
+  nav ul ul,
+  nav ul ul ul {
+    list-style: ground-level;
+  }
+
+  ul.dashed {
+    list-style-type: none;
+  }
+
+  ul.dashed > li {
+    text-indent: -5px;
+  }
+
+  ul.dashed > li:before {
+    content: "-";
+    text-indent: -5px;
+  }
+
+  nav a:link,
+  nav a:visited {
+    color: #151515;
+  }
+
+  nav a:hover,
+  nav a:active {
+    color: #f14848;
+    background-color: #fff;
+  }
+
+  .sub-menu a:hover,
+  .sub-menu a:active,
+  .deep-menu a:hover,
+  .deep-menu a:active {
+    color: #f14848;
+    background-color: #fff;
+  }
+
+  .main-menu li {
+    padding: 8px 0;
+  }

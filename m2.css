@@ -1,0 +1,36 @@
+nav {
+    height: 66px;
+    padding-left: 25px;
+    padding-right: 10px;
+    width: 100%;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+}
+
+/*nav::after{*/
+/*content: '';*/
+/*display: block;*/
+/*clear: both;*/
+/*}*/
+nav > a {
+    line-height: 66px;
+    vertical-align: middle;
+
+}
+
+nav > a > img {
+    vertical-align: middle;
+}
+
+/*menu style*/
+
+/*.sub-menu*/
+/*{*/
+/*opacity: 0;*/
+/*transition-property: opacity;*/
+/*transition-duration: 1s;*/
+/*}*/

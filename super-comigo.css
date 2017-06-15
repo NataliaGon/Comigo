@@ -1,0 +1,816 @@
+/*
+******************
+* GENERAL
+******************
+*/
+h1, h2, h3, h4, h5, h6,a {
+	font-family: 'roboto';
+	color: white;
+	text-decoration: none;
+	letter-spacing:2px;
+	font-weight: 100;
+}
+h1{
+	font-size: 56px;
+} 
+h2{
+	font-size: 48px;		
+}
+h3{
+	font-size: 28px;
+}
+h4{
+	font-size: 16px;
+}
+h5{
+	font-size: 14px;
+}
+h6{
+	font-size: 11px;
+}
+button{
+	background-color: rgb(241, 72, 72);
+	color: white;
+	border-radius: 25px;
+	margin-top: 30px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	border: none;
+	transition-property: transform;
+    transition-duration: 150ms;
+    transition-timing-function: ease-in-out;
+    transition-delay: initial;
+    cursor: pointer;
+}
+button:hover{
+	transform: translateY(-3px);
+	box-shadow: 0px 7px 10px 5px rgba(0,0,0,0.12);
+	z-index: 1;
+}
+/*
+******************
+* HEADER
+******************
+*/
+.header{
+  display:flex;
+  width: 100%;
+  height: 66px;
+  flex-wrap: wrap;  
+  position: fixed;
+  top:0;
+  background: white;  
+  z-index: 4;  
+}  
+.logo-black{   
+  padding-top:20px;
+  padding-left: 25px;
+}
+.navtop{
+ flex: auto; 
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: flex-end;
+ align-items:center; 
+}
+.navtop a{
+  text-decoration: none;
+  color: #808080;  
+}
+.navtop .selected {
+  color:rgb(241, 72, 72);
+  font-weight:700;
+}
+
+.navtop li{
+  display:inline-flex;
+  padding-right: 20px;  
+  height:  100%;
+  align-items:center;
+  cursor: pointer;
+}
+ .navtop > ul {
+   height:  100%;
+   display: flex;    
+   align-items:center;
+}    
+.navtop> ul> li> ul{
+  position: absolute;
+  display: flex;
+  top: 66px;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+  height: 132px;
+  transform: scale(1, 0);
+  transition: transform 0.2s;
+  justify-content: center;
+  align-items:center;
+  background: white; 
+  opacity: 0.99; 
+  
+}
+.navtop li:hover >ul {
+    transform: scale(1, 1);    
+}
+
+.navtop ul ul ul{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    transform: scale(1, 0);
+    transition: transform 0.2s;      
+    display: flex;
+    flex-grow: 1;  
+    height: 132px;
+    background: white;
+    opacity: 0.99;
+ }   
+
+nav ul ul li {
+    flex-basis: 33.33%;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+.navtop ul ul ul li{
+	 display: flex;
+	 flex-basis: 50%;
+	 justify-content: center;	
+}
+
+nav ul li ul li:hover{
+  background: rgb(241, 72, 72);  
+  
+} 
+nav ul li ul li:hover >a{
+	color: white;
+}
+.navtop>ul>li>ul>li>ul>li:hover  .navtop>ul>li>ul>li{
+  background: white;
+}
+/*.navideo ul li:hover ~ .show figure{
+  display: none;
+}
+******************
+* CINEMA
+******************
+*/
+.cinema{
+	background: url(comigo/other/homepage-featured-new-1920x745.jpg) no-repeat;
+	background-position: 100%;
+	background-size: cover;
+	width: 100%;
+	height: 80%;
+	text-align: center;
+	margin-top: 70px;
+}
+.cinema h3{ 
+	padding-top: 150px;	
+}
+/*
+******************
+* WHY
+******************
+*/
+.why{
+	background: white;
+	text-align: center;
+	width: 100%;
+	height: 400px;
+}
+.why h2{
+	padding-top: 90px;
+	padding-bottom: 20px;
+	color: #696969;	
+	font-weight:100;	
+}
+.why h4{
+	color: #808080;
+	font-weight:100;
+	letter-spacing:0.1px;  
+}
+/*
+******************
+* VIDEOS
+******************
+*/
+.videoplace{
+	position: relative;
+	width: 100%;
+	height: 550px;
+	background: black;
+	top: 0; right: 0; bottom: 0; left: 0;
+	overflow: hidden;	
+}
+
+.engage{
+	position: absolute;	
+	top:60px;
+	left:120px;
+	z-index: 3;	
+}
+.engage h3, .engage h5{
+	line-height: 1.5;	
+}
+.engage h3{
+	text-transform: uppercase; 
+}
+.engage h5{
+	margin-top: 20px;
+}
+.navideo{
+	position: absolute;	 
+	width: 100%;		
+	height: 550px;	
+	z-index: 3;
+    text-transform: uppercase; 
+}
+.navideo h4{
+	font-size: 20px;
+	margin-left:550px;
+}
+.navideo ul{
+	padding-top: 60px;
+}
+.navideo a{
+	text-decoration: none;
+	color: #808080;
+	line-height: 2.5;
+}
+.navideo a:hover{
+	color: rgb(241, 72, 72);
+}
+.navideo li{
+	width: 20%;	
+}
+.videosection video{
+	position: absolute;	
+	min-height: 100%;
+    min-width: 100%; 
+    bottom: 0;
+    right: 0;
+   
+}
+.video-wrapper{
+
+	position: absolute;	
+	min-height: 100%;
+    min-width: 100%; 
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+
+}
+.video-wrapper::after{
+	content: "";
+	position: absolute;	
+	min-height: 100%;
+    min-width: 100%; 
+    bottom: 0;
+    right: 0;
+    background: black;
+    opacity: 0.8;
+
+}
+.videosection figcaption{
+    position: absolute;	 
+	top:40px;
+	right:60px;
+	z-index: 3;	
+}
+.videosection h5{
+	text-align: center;
+}
+.videosection img{
+	position: absolute;	 
+	top:80px;
+	right:40px;
+	z-index: 3;
+}
+.show{
+	display: block;
+}
+
+.navideo li:not(.show) figure{
+	display: none;
+}
+.navideo ul li:hover ~ .show figure{
+  display: none;
+}
+.navideo ul li:hover figure{
+	display: block;
+}
+/*
+******************
+* BOXES
+******************
+*/
+.twobox{
+	width: 100%;
+	height: 572px;
+	clear: both;
+}
+.box1{	
+	width: 50%;
+	height: 100%;
+    float: left;
+	background-image: 
+	            url(comigo/other/ic_EI_cloud_2_home_page.png),
+	            url(comigo/other/home-tv-service-bg1.png);	            	
+	background-position:  35% 15%, 100% 100%;
+    background-size: 50%, 100%;
+	background-repeat: no-repeat, no-repeat;
+    position: relative;
+
+}	
+.box2{       
+	width: 50%;
+	height: 100%;
+	float: left;
+	background-image: 
+	             url(comigo/other/ic-stb-screens.png),
+	             url(comigo/other/home-tv-service-bg2.png);	
+	background-position: 13% 15%, 100% 100%;
+	background-size: 40%, 100%;
+	background-repeat: no-repeat, no-repeat;
+	position: relative;
+}
+.box1 button{
+	position: absolute;
+	background: white;
+	color: rgb(241, 72, 72);
+	border-radius: 25px;
+	bottom:  10%;
+	left: 22%;	
+}
+.box2 button{
+	position: absolute;
+	bottom: 10%;
+	left: 7%;
+}
+
+.box1 .boxtext{
+	position: absolute;
+	bottom: 26%;
+	left: 22%;
+}
+.box2 .boxtext{
+	position: absolute;
+	bottom: 26%;
+	left: 7%;
+}
+.twobox h2{
+	font-size: 34px;
+	font-weight: 100;
+}
+.twobox h5{
+	font-weight: 100;
+} 
+.box2 h2{	
+	color: #505050;
+}
+.box2 h5{
+	color: #808080;
+}
+
+/*
+******************
+* WHO
+******************
+*/
+.who {
+	background: white;
+	width: 100%;
+	height: 670px;	
+	clear: both;
+}
+.whotext{
+	float: left;
+	width: 40%;
+    height: 600px;
+}
+.whoimg {	
+	float: left;
+	width: 60%;
+	height: 100%;	
+	position: relative;	
+	overflow: hidden;	
+}
+.whoimgreal{
+	position:absolute;
+	width: 100%;
+	height: 85%;	
+	background: url(comigo/other/screen_whos_on.jpg) no-repeat;
+	background-size: contain;
+	right: -80px;
+	top:50px;
+}	
+.who button{
+	margin-left: 150px;
+}
+.who h2, .who h5{
+	font-weight: 100;
+	padding-left: 150px;
+}
+.who h2{
+	padding-top: 150px;
+	padding-bottom: 20px;
+	color: #505050;
+	line-height: 1;
+}
+.who h5{
+	color: #808080;
+}
+/*
+******************
+* BIGMESS
+******************
+*/
+.bigmess{
+	width: 100%;
+	height: 550px;	
+	position:relative;
+}
+.left{
+	background:  #D3D3D3;
+	width: 60%;
+	height: 100%;
+	position: absolute;
+	top:0;
+	left:0;
+}
+.right{
+	background:  #DCDCDC;
+	width: 40%;
+	height: 100%;
+	position: absolute;
+	top:0;
+	right:0;
+}
+.right h1{	
+	margin-left: 20px;
+	margin-top: 20px;
+	color: #505050;
+}
+.right img{
+	margin-top: 20px;
+	margin-left: 41px;
+}
+.right:hover{
+	z-index: 1;
+	transform: scale(1.02);
+	box-shadow: 0px -2px 24px 2px rgba(0,0,0,0.2);
+}
+.topleft{
+	background: #F9F6FC;
+	width: 67%;
+	height: 50%;
+	float: left;
+}
+.topleft h1{
+	font-weight: 100;
+	margin-left: 30px;
+	margin-top: 130px;
+	color: #505050;
+} 
+.topright{
+	background:  rgb(241, 72, 72);
+	width: 33%;	
+	height: 50%;
+	float: left;
+	position: relative;
+}
+.topright h4{
+	margin-left: 20px;	
+	height: 20%;
+	bottom: 0;
+	position: absolute;
+}
+
+.bottomleft{
+	background: #EBE8E8;
+	width: 35%;
+	height: 50%;	
+	float: left;
+	position: relative;
+}
+.buttons{
+	position: absolute;
+	height: 90%;
+	width: 90%;
+	top:13px;
+	left:17px;
+}
+.bottomleft button{
+	float: left;
+	border-radius: 50%;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	padding-right: 25px;
+	padding-left: 25px;	
+	margin-left: 25px;
+	color: white;
+}
+
+.bottomright{
+	background: #D3D3D3;
+	width: 65%;
+	height: 50%;	
+	float: left;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+.bottomright:hover{
+	z-index: 1;
+    box-shadow: 0px -2px 24px 2px rgba(0,0,0,0.2);
+	transform: scale(1.02);
+}
+.bottomright h4{
+	color: #808080;
+	margin-left: 30px;
+	margin-top: 30px;
+}
+.bottomright img{
+    margin-top: 10px; 
+    margin-left: 110px;
+}
+.bottomleft .icon-facebook, .bottomleft .icon-twitter, .bottomleft .icon-linkedin2, .bottomleft .icon-youtube{
+	font-size: 32px;
+}
+.icon-download3{
+	color: white;
+	font-size: 150px;
+	margin-top: 50px;
+	margin-left: 60px;
+}
+/*
+******************
+* BLOG
+******************
+*/
+.blog {
+	background: green;	
+	width: 100%;
+	height: 470px;	
+	clear: both;
+	position: relative;
+	top:0;
+}
+.shadow{	
+	position: absolute;
+	background: black;	
+	width: 16.6666667%;
+	height: 470px;	
+	opacity: 0.8;
+	top:0;
+	z-index: 1;
+}
+.red{
+	background: rgb(241, 72, 72);	
+	width: 16.6666667%;
+	height: 100%;
+	float: left;	
+} 
+.red h1{
+	padding-left: 20px;
+	padding-top: 300px;	
+}
+.red h4{
+	padding-left: 20px;
+}
+.one{
+    background: url(comigo/blog/one.png)  no-repeat;
+    background-position: center;	
+	width: 16.6666667%;
+	height: 100%;
+	float: left;		
+}
+.hidden{
+	width:100%;
+	height:40%;
+	margin-top: 167.5%;	
+	transition-property: transform;
+    transition-duration: 600ms;
+    transition-timing-function: ease-in-out;
+    transition-delay: initial;        
+}
+.text{	
+	width:100%;
+	height:50%;	
+	position: relative;
+}
+.read{
+    background: rgb(241, 72, 72);
+	width:100%;
+	height:50%;	
+ }
+.two{
+	background: url(comigo/blog/two.jpeg)  no-repeat;	
+	background-position: center;
+	width: 16.6666667%;
+	height: 100%;
+	float: left;	
+}
+.three{
+	background: url(comigo/blog/three.jpg)  no-repeat;	
+	background-position: center;
+	width: 16.6666667%;
+	height: 100%;
+	float: left;
+}
+.four{
+	background: url(comigo/blog/four.jpeg)  no-repeat;	
+	background-position: center;
+	width: 16.6666667%;
+	height: 100%;
+	float: left;
+}
+.five{
+	background: url(comigo/blog/five.jpeg)  no-repeat;
+	background-position: center;
+	width: 16.6666667%;
+	height: 100%;
+	float: left;
+}
+.one,.two,.three,.four,.five{
+	transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    transition-delay: initial;
+    overflow: hidden; 
+    box-shadow: 0px 0px 300px 50px black inset;	      
+}
+.one:hover,.two:hover,.three:hover,.four:hover,.five:hover{
+	z-index: 2;
+    box-shadow: 0px -2px 24px 2px rgba(0,0,0,0.2);
+	transform: scale(1.1);
+}
+.one:hover .read,.two:hover .read,.three:hover .read,.four:hover .read,.five:hover .read{
+    box-shadow: -30px 1px 150px 75px black ;
+}
+.one:hover .hidden,.two:hover .hidden,.three:hover .hidden,.four:hover .hidden,.five:hover .hidden{
+	transform: translateY(-93px);
+}
+.blog button{
+	margin-left: 50px;
+	box-shadow: none;
+	transform: none;
+}
+.text h5{
+	position: absolute;
+    bottom:0;
+    left:6%;
+}
+
+/*
+******************
+* FOOTER
+******************
+*/
+.gray{
+	top: 0px;
+    background: #292929;
+    width: 100%;
+	height: 250px;
+	clear:both;	
+}
+.bottomnav{	
+    width: 70%;
+	height: 100%;
+	float:left;
+	clear:both;
+}
+.logowhite{
+	width: 30%;
+	height: 100%;
+	float:left;	
+}
+.menuone{	
+	width: 33%;
+	height: 100%;
+	float:left;			
+}
+.menutwo{	
+    width: 33%;
+	height: 100%;
+	float:left;  	
+}
+.menuthree{	
+    width: 33%;
+	height: 100%;
+	float:left;	
+}
+.menuone h5, .menutwo h5, .menuthree h5{
+    padding-left: 100px; 
+    padding-top: 20px; 
+}	
+.menuone h5:first-child, .menutwo h5:first-child, .menuthree h5:first-child{
+	padding-top: 50px;
+}
+.bottomsmall{	
+	float: bottom;
+	width: 100%;
+	height: 50%;
+}
+.bottomsmall h6{
+	color: #808080;
+	padding-left: 100px; 
+    padding-top: 10px;
+}
+.bottomsmall h6:hover{
+	color: rgb(241, 72, 72);
+}
+.logowhite img{
+	margin-top: 50px;
+	margin-left: 100px;
+	width: 138px;
+	height: 24px;
+}
+.black{
+    background:#191919;
+	width: 100%;
+	height: 50px;	
+	clear: both;
+}
+.rights{
+	width: 25%;
+	height: 100%;
+	float:left;
+	
+}
+.bottomblack{	
+	width: 25%;
+	height: 100%;
+	float:left;
+	
+}
+.develop{	
+	width: 25%;
+	height: 100%;
+	float:left;
+	
+}
+.soshial{    	
+	width: 25%;
+	height: 100%;
+	float:left;	
+	position: relative;
+}
+.rights h6,.bottomblack h6,.develop h6,.soshial h6{
+	color: #808080;
+	margin-top: 15px;
+	letter-spacing:1px;	
+}
+.rights h6{
+	float: right;
+	margin-right: 10px;
+}
+.bottomblack li{
+	display:inline;
+	margin-right:15px;	
+}
+.develop h6{
+	font-size: 10px;
+	float: right;
+	margin-right: 20px;r
+}
+.bottomblack li::before {
+	content: ' | '	
+}	
+.buttonsoshial{
+	height: 100%;
+	width: 50%;
+	margin-left: 110px;
+	margin-bottom: 3px;
+	clear: both;
+}
+.soshial button{
+	padding: 4px;
+	padding-right: 5px;
+	padding-left: 5px;
+	float:left;
+	margin-right: 4px;
+	border: 1px solid #808080;
+	background: #191919;
+	margin-top: 12px;
+}
+.soshial a{
+	text-decoration: none;
+}
+.soshial button:hover span{
+	color: white;
+	   
+}
+.soshial button:hover{
+	transform: none; 
+}
+.soshial .icon-facebook, .soshial .icon-twitter, .soshial .icon-linkedin2, .soshial .icon-youtube{
+	font-size: 12px;
+	color: #808080;
+}
+
