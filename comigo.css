@@ -54,6 +54,18 @@ button:hover{
 * HEADER
 ******************
 */
+.navtop .selected {
+  color:rgb(241, 72, 72);
+  font-weight:700;
+}
+.navtop a{
+  text-decoration: none;
+  color: #808080;  
+}
+.menu-link, label {
+  display: none;
+}
+@media screen and (min-width : 760px){
 .header{
   display:flex;
   width: 100%;
@@ -63,10 +75,10 @@ button:hover{
   top:0;
   background: white;  
   z-index: 4;  
-}  
+} 
 .logo-black{   
-  padding-top:20px;
-  padding-left: 25px;
+  margin-top:20px;
+  margin-left: 25px;
 }
 .navtop{
  flex: auto; 
@@ -75,15 +87,6 @@ button:hover{
  justify-content: flex-end;
  align-items:center; 
 }
-.navtop a{
-  text-decoration: none;
-  color: #808080;  
-}
-.navtop .selected {
-  color:rgb(241, 72, 72);
-  font-weight:700;
-}
-
 .navtop li{
   display:inline-flex;
   padding-right: 20px;  
@@ -109,13 +112,11 @@ button:hover{
   justify-content: center;
   align-items:center;
   background: white; 
-  opacity: 0.99; 
-  
+  opacity: 0.99;   
 }
 .navtop li:hover >ul {
     transform: scale(1, 1);    
 }
-
 .navtop ul ul ul{
     position: absolute;
     top: 100%;
@@ -128,33 +129,90 @@ button:hover{
     height: 132px;
     background: white;
     opacity: 0.99;
- }   
-
+ } 
 nav ul ul li {
     flex-basis: 33.33%;
     display: flex;
     justify-content: center;
     font-size: 30px;
+    text-transform: uppercase;
 }
 .navtop ul ul ul li{
-	 display: flex;
-	 flex-basis: 50%;
-	 justify-content: center;	
+	display: flex;
+	flex-basis: 50%;
+	justify-content: center;	
 }
-
 nav ul li ul li:hover{
-  background: rgb(241, 72, 72);  
-  
+    background: rgb(241, 72, 72);   
 } 
 nav ul li ul li:hover >a{
 	color: white;
 }
 .navtop>ul>li>ul>li>ul>li:hover  .navtop>ul>li>ul>li{
-  background: white;
+    background: white;  
 }
-/*.navideo ul li:hover ~ .show figure{
-  display: none;
+
 }
+@media screen and (max-width : 760px){	
+	header{		
+        width: 100%;
+        height: 66px;        
+        position: fixed;
+        top:0;
+        background: white;  
+        z-index: 4; 
+        clear:both; 
+	}
+	.logo-black{	       
+		margin-top:20px;
+		padding-left: 25px;
+		height: 30px;
+		float: left;
+	}		
+	.navtop{	
+		width: 100%;
+		height: 550px;
+		background: white;	
+		margin-top: 66px;
+		display: none;
+	}
+	.navtop li{
+		margin-left: 30px;		
+		line-height: 1.9;		
+	}		
+    .navtop ul li ul li::before{
+    	content: '- ';
+    } 
+    .menu-link ~ .icon-menu {    
+	    font-size: 24px;
+	    display: block;
+	    float: right;	   
+	    margin-top: 2%;
+	    padding-right: 2%;	    
+    }
+    .menu-link ~ .icon-cross {
+    	display: none;
+    }
+    .menu-link:checked ~ .icon-menu {
+    	display: none;
+    }
+    .menu-link:checked ~ .icon-cross {
+	    display: block;
+	    font-size: 24px;
+	    float: right;	    
+	    padding-right: 2%;	    
+	    margin-top: 2%;
+  	}    
+    .menu-link:checked ~.navtop {
+    	display: block;
+    }
+    .icon-menu:hover,.icon-cross:hover{
+    	color: rgb(241, 72, 72);
+    	
+    }
+
+}
+/*
 ******************
 * CINEMA
 ******************
@@ -382,6 +440,7 @@ nav ul li ul li:hover >a{
 		width: 100%;
 	}
 }
+
 /*
 ******************
 * WHO
@@ -560,11 +619,6 @@ nav ul li ul li:hover >a{
 	margin-top: 50px;
 	margin-left: 60px;
 }
-@media (max-width: 750px){
-	
-		
-	}
-}
 /*
 ******************
 * BLOG
@@ -620,16 +674,12 @@ nav ul li ul li:hover >a{
 	width:100%;
 	height:50%;	
 	position: relative;
-	top:93px;
-
 }
 .read{
     background: rgb(241, 72, 72);
-	width: 100%;
-	height: 50%;
-	position: relative;
-	top:93px;	
-	}
+	width:100%;
+	height:50%;	
+ }
 .two{
 	background: url(comigo/blog/two.jpeg)  no-repeat;	
 	background-position: center;
@@ -672,7 +722,7 @@ nav ul li ul li:hover >a{
 	transform: scale(1.1);
 }
 .one:hover .read,.two:hover .read,.three:hover .read,.four:hover .read,.five:hover .read{
-    box-shadow: -30px 1px 150px 75px black;
+    box-shadow: -30px 1px 150px 75px black ;
 }
 .one:hover .hidden,.two:hover .hidden,.three:hover .hidden,.four:hover .hidden,.five:hover .hidden{
 	transform: translateY(-93px);
@@ -694,6 +744,7 @@ nav ul li ul li:hover >a{
 		
 	}
 }
+
 /*
 ******************
 * FOOTER
@@ -806,8 +857,8 @@ nav ul li ul li:hover >a{
 	float: right;
 	margin-right: 20px;r
 }
-.bottomblack li:before {
-	content: ' | '
+.bottomblack li::before {
+	content: ' | '	
 }	
 .buttonsoshial{
 	height: 100%;
