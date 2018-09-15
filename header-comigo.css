@@ -1,0 +1,234 @@
+/*
+******************
+* GENERAL
+******************
+*/
+@font-face {
+  font-family: "Proxima Nova Thin";
+  src: url("ProximaNovaT-Thin.eot");
+  src: url("ProximaNovaT-Thin.eot?#iefix") format("embedded-opentype"),
+    url("ProximaNovaT-Thin.woff") format("woff"),
+    url("ProximaNovaT-Thin.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+li {
+  font-family: "Proxima Nova Thin", Tahoma, sans-serif !important;
+  color: white;
+  text-decoration: none;
+  font-weight: 100;
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  font-size: 1rem;
+}
+h1 {
+  font-size: 2.2rem;
+}
+h2 {
+  font-size: 1.8rem;
+}
+h3 {
+  font-size: 1.6rem;
+}
+h4 {
+  font-size: 1.2rem;
+}
+h5 {
+  font-size: 1rem;
+}
+h6 {
+  font-size: 0.75rem;
+}
+button {
+  background-color: rgb(241, 72, 72);
+  color: white;
+  border-radius: 25px;
+  margin-top: 30px;
+  padding: 15px 20px;
+  border: none;
+  transition-property: transform;
+  transition-duration: 150ms;
+  transition-timing-function: ease-in-out;
+  transition-delay: initial;
+  cursor: pointer;
+}
+.btn-transform:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 7px 10px 5px rgba(0, 0, 0, 0.12);
+  z-index: 1;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.padding_15 {
+  padding: 15px;
+}
+/*
+  ******************
+  * HEADER
+  ******************
+  */
+.navtop .selected {
+  color: rgb(241, 72, 72);
+  font-weight: 700;
+}
+.navtop a {
+  text-decoration: none;
+  color: #808080;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+.menu-link,
+label {
+  display: none;
+}
+@media (min-width: 768px) {
+  #header {
+    width: 100%;
+    height: 66px;
+    position: fixed;
+    top: 0;
+    background: white;
+    z-index: 4;
+    line-height: 66px;
+  }
+  .logo-black {
+    float: left;
+    margin-left: 15px;
+  }
+  .navtop {
+    float: right;
+  }
+  .first-line-nav,
+  .second-line-nav,
+  .third-line-nav {
+    display: inline-block;
+  }
+  .first-line-nav {
+    padding-right: 15px;
+    height: 100%;
+    cursor: pointer;
+  }
+  .second-line-nav{
+    width: 33.333%;
+  }
+  .third-line-nav{
+    width: 50%;
+  } 
+  .second-line-nav,
+  .third-line-nav {
+    line-height: 132px;
+    text-align: center;
+  }
+  .navtop > ul > li > ul {
+    position: absolute;
+    top: 66px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    height: 132px;
+    transform: scale(1, 0);
+    transition: transform 0.2s;
+    /* background: green; */
+    opacity: 0.99;
+    font-size: 0;
+  }
+  .navtop li:hover > ul {
+    transform: scale(1, 1);
+  }
+  .navtop ul ul ul {
+    position: absolute;
+    top: 132px;
+    left: 0;
+    right: 0;
+    transform: scale(1, 0);
+    transition: transform 0.2s;
+    height: 132px;
+    /* background: orange; */
+    opacity: 0.99;
+    font-size: 0;
+  }
+  nav ul ul li {
+    text-transform: uppercase;
+  }
+  nav ul li ul li a:hover {
+    background: rgb(241, 72, 72);
+    color: white;
+  }
+  /* .navtop > ul > li > ul > li > ul > li:hover .navtop > ul > li > ul > li {
+    background: white;
+    color: #808080;
+  } */
+}
+@media (max-width: 767px) {
+  header {
+    width: 100%;
+    height: 66px;
+    position: fixed;
+    top: 0;
+    background: white;
+    z-index: 4;
+    clear: both;
+  }
+  .logo-black {
+    margin-top: 20px;
+    padding-left: 25px;
+    height: 30px;
+    float: left;
+  }
+  .navtop {
+    width: 100%;
+    height: 550px;
+    background: white;
+    margin-top: 66px;
+    display: none;
+  }
+  .navtop li {
+    margin-left: 30px;
+    line-height: 1.9;
+  }
+  .navtop ul li ul li::before {
+    content: "- ";
+  }
+  .menu-link ~ .icon-menu {
+    font-size: 24px;
+    display: block;
+    float: right;
+    margin-top: 2%;
+    padding-right: 2%;
+  }
+  .menu-link ~ .icon-cross {
+    display: none;
+  }
+  .menu-link:checked ~ .icon-menu {
+    display: none;
+  }
+  .menu-link:checked ~ .icon-cross {
+    display: block;
+    font-size: 24px;
+    float: right;
+    padding-right: 2%;
+    margin-top: 2%;
+  }
+  .menu-link:checked ~ .navtop {
+    display: block;
+  }
+  .icon-menu:hover,
+  .icon-cross:hover {
+    color: rgb(241, 72, 72);
+  }
+}
