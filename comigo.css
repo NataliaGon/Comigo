@@ -12,7 +12,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
 h1,
 h2,
 h3,
@@ -77,10 +76,10 @@ button {
   padding: 15px;
 }
 /*
-******************
-* HEADER
-******************
-*/
+  ******************
+  * HEADER
+  ******************
+  */
 .navtop .selected {
   color: rgb(241, 72, 72);
   font-weight: 700;
@@ -91,47 +90,56 @@ button {
   width: 100%;
   height: 100%;
 }
+#logo-black {
+  float: left;
+  margin-left: 15px;
+}
 .menu-link,
 label {
   display: none;
 }
-@media (min-width: 701px) {
+@media (min-width: 768px) {
   #header {
-    display: flex;
     width: 100%;
     height: 66px;
-    flex-wrap: wrap;
     position: fixed;
     top: 0;
     background: white;
     z-index: 4;
-  }
-  .logo-black {
-    margin-top: 20px;
-    margin-left: 25px;
+    line-height: 66px;
   }
   .navtop {
-    flex: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    align-items: center;
+    float: right;
   }
-  .navtop li {
-    display: inline-flex;
-    padding-right: 20px;
+  .navtop a {
+    display: inline-block;
+  }
+  .first-line-nav,
+  .second-line-nav,
+  .third-line-nav {
+    display: inline-block;
+  }
+  .first-line-nav {
+    padding-right: 15px;
     height: 100%;
-    align-items: center;
     cursor: pointer;
   }
-  .navtop > ul {
-    height: 100%;
-    display: flex;
-    align-items: center;
+  .second-line-nav{
+    width: 33.333%;
   }
-  .navtop > ul > li > ul {
+  .third-line-nav{
+    width: 50%;
+  } 
+  .second-line-nav,
+  .third-line-nav {
+    line-height: 132px;
+    text-align: center;
+  }
+  .first-line-nav >a:hover{
+    color: rgb(241, 72, 72);
+  }
+  .navtop > ul > li > ul, .navtop ul ul ul {
     position: absolute;
-    display: flex;
     top: 66px;
     left: 0px;
     right: 0px;
@@ -139,85 +147,62 @@ label {
     height: 132px;
     transform: scale(1, 0);
     transition: transform 0.2s;
-    justify-content: center;
-    align-items: center;
-    background: white;
     opacity: 0.99;
+    font-size: 0;
+    background: white;
+  }
+  .navtop > ul > li > ul{
+    top: 66px; 
+  }
+  .navtop ul ul ul {
+    top: 132px; 
   }
   .navtop li:hover > ul {
     transform: scale(1, 1);
   }
-  .navtop ul ul ul {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    transform: scale(1, 0);
-    transition: transform 0.2s;
-    display: flex;
-    flex-grow: 1;
-    height: 132px;
-    background: white;
-    opacity: 0.99;
-  }
   nav ul ul li {
-    flex-basis: 33.33%;
-    display: flex;
-    justify-content: center;
-    font-size: 30px;
     text-transform: uppercase;
-  }
-  .navtop ul ul ul li {
-    display: flex;
-    flex-basis: 50%;
-    justify-content: center;
   }
   nav ul li ul li a:hover {
     background: rgb(241, 72, 72);
-  }
-  nav ul li ul li:hover > a {
     color: white;
   }
-  .navtop > ul > li > ul > li > ul > li:hover .navtop > ul > li > ul > li {
-    background: white;
-  }
 }
-@media (max-width: 700px) {
-  header {
+@media (max-width: 767px) {
+  #header {
     width: 100%;
     height: 66px;
     position: fixed;
     top: 0;
     background: white;
     z-index: 4;
-    clear: both;
-  }
-  .logo-black {
-    margin-top: 20px;
-    padding-left: 25px;
-    height: 30px;
-    float: left;
+    line-height: 66px;
   }
   .navtop {
+    display: none;
     width: 100%;
-    height: 550px;
+    height: auto;
     background: white;
     margin-top: 66px;
-    display: none;
+    box-shadow: 0px 10px 20px #808080;
   }
   .navtop li {
     margin-left: 30px;
     line-height: 1.9;
   }
+  .navtop ul li a:hover{
+    color: rgb(241, 72, 72);
+  }
   .navtop ul li ul li::before {
     content: "- ";
+    color: #808080;
   }
   .menu-link ~ .icon-menu {
     font-size: 24px;
     display: block;
     float: right;
-    margin-top: 2%;
-    padding-right: 2%;
+    margin-top: 18px;
+    margin-right: 15px;
   }
   .menu-link ~ .icon-cross {
     display: none;
@@ -229,8 +214,8 @@ label {
     display: block;
     font-size: 24px;
     float: right;
-    padding-right: 2%;
-    margin-top: 2%;
+    margin-top: 18px;
+    margin-right: 15px;
   }
   .menu-link:checked ~ .navtop {
     display: block;
@@ -253,7 +238,7 @@ label {
   height: 38.79vw;
   min-height: 500px;
   text-align: center;
-  margin-top: 70px;
+  margin-top: 66px;
 }
 #top-banner div {
   position: absolute;
@@ -512,7 +497,7 @@ label {
   #box2 {
     float: none;
     width: 100%;
-    height: 100vw;
+    height: 500px;
   }
 }
 /*
@@ -589,13 +574,13 @@ label {
 }
 .left {
   background: #d3d3d3;
-  width: 65%;
+  width: 60%;
   height: 100%;
   float: left;
 }
 .right {
   background: #dcdcdc;
-  width: 35%;
+  width: 40%;
   height: 100%;
   float: right;
 }
@@ -611,13 +596,13 @@ label {
 }
 .topleft {
   background: #f9f6fc;
-  width: 67%;
+  width: 66.66%;
   height: 50%;
   float: left;
 }
 .topright {
   background: rgb(241, 72, 72);
-  width: 33%;
+  width: 33.33%;
   height: 50%;
   float: left;
   text-align: center;
@@ -632,7 +617,7 @@ label {
 }
 .bottomleft {
   background: #ebe8e8;
-  width: 35%;
+  width: 33.33%;
   height: 50%;
   float: left;
 }
@@ -668,7 +653,7 @@ label {
 }
 .bottomright {
   background: #d3d3d3;
-  width: 65%;
+  width: 66.66%;
   height: 50%;
   float: left;
 }
@@ -684,9 +669,7 @@ label {
   color: #808080;
 }
 .bottomright img {
-  margin-top: 10px;
-  margin: auto;
-  width: 90%;
+  width: 100%;
 }
 .bottomleft .icon-facebook,
 .bottomleft .icon-twitter,
