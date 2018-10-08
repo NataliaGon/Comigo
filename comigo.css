@@ -28,6 +28,9 @@ li {
 * {
   box-sizing: border-box;
 }
+body{
+  overflow-x: hidden;
+}
 a {
   font-size: 1rem;
 }
@@ -62,10 +65,12 @@ button {
   transition-delay: initial;
   cursor: pointer;
 }
+@media (min-width: 768px) {
 .btn-transform:hover {
   transform: translateY(-3px);
   box-shadow: 0px 7px 10px 5px rgba(0, 0, 0, 0.12);
   z-index: 1;
+}
 }
 .clearfix:after {
   content: "";
@@ -124,21 +129,22 @@ label {
     height: 100%;
     cursor: pointer;
   }
-  .second-line-nav{
+  .second-line-nav {
     width: 33.333%;
   }
-  .third-line-nav{
+  .third-line-nav {
     width: 50%;
-  } 
+  }
   .second-line-nav,
   .third-line-nav {
     line-height: 132px;
     text-align: center;
   }
-  .first-line-nav >a:hover{
+  .first-line-nav > a:hover {
     color: rgb(241, 72, 72);
   }
-  .navtop > ul > li > ul, .navtop ul ul ul {
+  .navtop > ul > li > ul,
+  .navtop ul ul ul {
     position: absolute;
     top: 66px;
     left: 0px;
@@ -151,11 +157,11 @@ label {
     font-size: 0;
     background: white;
   }
-  .navtop > ul > li > ul{
-    top: 66px; 
+  .navtop > ul > li > ul {
+    top: 66px;
   }
   .navtop ul ul ul {
-    top: 132px; 
+    top: 132px;
   }
   .navtop li:hover > ul {
     transform: scale(1, 1);
@@ -190,7 +196,7 @@ label {
     margin-left: 30px;
     line-height: 1.9;
   }
-  .navtop ul li a:hover{
+  .navtop ul li a:hover {
     color: rgb(241, 72, 72);
   }
   .navtop ul li ul li::before {
@@ -227,7 +233,7 @@ label {
 }
 /*
 ******************
-* CINEMA
+* top-banner
 ******************
 */
 #top-banner {
@@ -240,14 +246,18 @@ label {
   text-align: center;
   margin-top: 66px;
 }
+#top-banner::before {
+  content: " ";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
 #top-banner div {
-  position: absolute;
-  top: 50%;
-  height: 150px;
   width: 80%;
   left: 10%;
   text-align: center;
-  margin-top: -75px;
+  display: inline-block;
+  vertical-align: middle;
 }
 /*
 ******************
@@ -259,12 +269,6 @@ label {
   text-align: center;
   width: 100%;
   padding: 10vw 0;
-}
-#why:before {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
 }
 #why h2 {
   color: #696969;
@@ -397,11 +401,11 @@ label {
     height: 400px;
   }
 }
-@media (max-width: 700px) {
+@media (max-width: 767px) {
   #videoplace {
-    height: 800px;
+    height: 810px;
   }
-  .video-wrapper video{
+  .video-wrapper video {
     display: none;
   }
   #engage,
@@ -461,30 +465,19 @@ label {
   background: white;
   color: rgb(241, 72, 72);
   border-radius: 25px;
-  bottom: 10%;
-  left: 22%;
+  bottom: 2rem;
+  left: 15%;
 }
 #box2 button {
   position: absolute;
-  bottom: 10%;
-  left: 7%;
+  bottom: 2rem;
+  left: 15%;
 }
-#box1 .boxtext {
-  position: absolute;
-  bottom: 26%;
-  left: 22%;
-}
+#box1 .boxtext,
 #box2 .boxtext {
   position: absolute;
-  bottom: 26%;
-  left: 7%;
-}
-#twobox h2 {
-  font-size: 34px;
-  font-weight: 100;
-}
-#twobox h5 {
-  font-weight: 100;
+  bottom: 6.6rem;
+  left: 15%;
 }
 #box2 h2 {
   color: #505050;
@@ -508,53 +501,48 @@ label {
 #who {
   background: white;
   width: 100%;
-  min-height: 670px;
+  height: 50vw;
   clear: both;
-  position: relative;
-  overflow: hidden;
+  text-align: center;
 }
 .whotext {
-  float: left;
   width: 40%;
-  min-height: 670px;
-  position: relative;
+  height: 100%;
   background: white;
+  vertical-align: middle;
+  text-align: center;
 }
 .whoimg {
-  float: right;
   width: 60%;
-  min-height: 670px;
-  position: relative;
-  background: white url(comigo/other/screen_whos_on.jpg) no-repeat;
-  background-size: 97%;
-  background-position-x: 370%;
-  background-position-y: 40%;
+  height: 100%;
+  vertical-align: middle;
 }
-#who button {
-  position: absolute;
-  left: 175px;
-  bottom: 150px;
+.whoimg img {
+  width: 98%;
+  margin-left: 10%;
 }
 #who h2,
 #who h5 {
-  position: absolute;
   font-weight: 100;
-  left: 150px;
 }
 #who h2 {
-  top: 150px;
   color: #505050;
   line-height: 1;
 }
 #who h5 {
-  bottom: 220px;
   color: #808080;
 }
 @media (max-width: 767px) {
+  #who {
+    height: auto;
+    display: block;
+    padding: 15px;
+  }
   .whotext,
   .whoimg {
-    float: none;
     width: 100%;
+    display: block;
+    padding: 30px 0;
   }
 }
 /*
@@ -566,16 +554,12 @@ label {
   width: 100%;
   height: 40vw;
   position: relative;
-}
-#about-us-social h2 {
-  color: #505050;
-  padding-top: 15px;
-  padding-left: 15px;
+  clear: both;
 }
 .left {
   background: #d3d3d3;
   width: 60%;
-  height: 100%;
+  height: 50%;
   float: left;
 }
 .right {
@@ -583,31 +567,33 @@ label {
   width: 40%;
   height: 100%;
   float: right;
+  padding: 15px 0 0 15px;
+  position: relative;
 }
 .right img {
-  margin-top: 20px;
-  margin-left: 41px;
-  width: 80%;
+  width: 100%;
 }
-.right:hover {
-  z-index: 3;
-  transform: scale(1.02);
-  box-shadow: 0px -2px 24px 2px rgba(0, 0, 0, 0.2);
+.right h2 {
+  color: #505050;
 }
 .topleft {
   background: #f9f6fc;
   width: 66.66%;
-  height: 50%;
+  height: 100%;
   float: left;
+  position: relative;
+}
+.topleft h2 {
+  color: #505050;
 }
 .topright {
   background: rgb(241, 72, 72);
   width: 33.33%;
-  height: 50%;
+  height: 100%;
   float: left;
   text-align: center;
 }
-.topright h6{
+.topright h6 {
   text-align: left;
   margin-top: 10px;
 }
@@ -618,7 +604,7 @@ label {
 .bottomleft {
   background: #ebe8e8;
   width: 33.33%;
-  height: 50%;
+  height: 100%;
   float: left;
 }
 .bottomleft table {
@@ -654,16 +640,11 @@ label {
 .bottomright {
   background: #d3d3d3;
   width: 66.66%;
-  height: 50%;
+  height: 100%;
   float: left;
 }
 .move-to-center {
   text-align: center;
-}
-.bottomright:hover {
-  z-index: 3;
-  box-shadow: 0px -2px 24px 2px rgba(0, 0, 0, 0.2);
-  transform: scale(1.02);
 }
 .bottomright h6 {
   color: #808080;
@@ -680,7 +661,28 @@ label {
 .icon-download3 {
   color: white;
 }
-@media (max-width: 700px) {
+@media (min-width: 768px) {
+  .topleft h2 {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+  }
+  .right img {
+    position: absolute;
+    bottom: 0;
+  }
+  .bottomright:hover {
+    z-index: 3;
+    box-shadow: 0px -2px 24px 2px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+  }
+  .right:hover {
+    z-index: 3;
+    transform: scale(1.02);
+    box-shadow: 0px -2px 24px 2px rgba(0, 0, 0, 0.2);
+  }
+}
+@media (max-width: 767px) {
   #about-us-social {
     height: auto;
   }
@@ -693,6 +695,27 @@ label {
     float: none;
     width: 100%;
     height: auto;
+  }
+  .topleft h2,
+  .right h2 {
+    font-size: 3.5rem;
+  }
+  .topright span {
+    font-size: 10rem;
+  }
+  .topright h6 {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 15px;
+  }
+  .bottomleft button {
+    padding: 1.5rem;
+  }
+  .bottomleft .icon-facebook,
+  .bottomleft .icon-twitter,
+  .bottomleft .icon-linkedin2,
+  .bottomleft .icon-youtube {
+    font-size: 2.5rem;
   }
 }
 /*
@@ -721,17 +744,17 @@ label {
   width: 16.6666667%;
   height: 100%;
   float: left;
-  padding: 20px;
+  padding: 15px;
   position: relative;
 }
 #title-for-blog {
   position: absolute;
-  bottom: 10px;
+  bottom: 15px;
 }
 .hidden {
   width: 100%;
-  height: 40%;
-  top: 80%;
+  height: auto;
+  bottom: -70px;
   transition-property: transform;
   transition-duration: 600ms;
   transition-timing-function: ease-in-out;
@@ -740,19 +763,12 @@ label {
 }
 .text {
   width: 100%;
-  height: 50%;
-  position: relative;
-}
-.text h5 {
-  position: absolute;
-  bottom: 10px;
-  right: 15px;
-  left: 15px;
+  padding: 10px 15px;
 }
 .read {
   background: rgb(241, 72, 72);
   width: 100%;
-  height: 50%;
+  height: 70px;
   box-shadow: none;
   margin-top: 0px;
   font-size: 1rem;
@@ -789,6 +805,7 @@ label {
   transition-delay: initial;
   overflow: hidden;
   box-shadow: 0px 0px 300px 50px black inset;
+  background-size: cover;
 }
 @media (min-width: 768px) {
   .one:hover,
@@ -800,19 +817,20 @@ label {
     box-shadow: 0px -2px 24px 2px rgba(0, 0, 0, 0.2);
     transform: scale(1.1);
   }
-  .one:hover .read,
-  .two:hover .read,
-  .three:hover .read,
-  .four:hover .read,
-  .five:hover .read {
-    box-shadow: -6px -90px 100px 25px black;
+  .one:hover .text,
+  .two:hover .text,
+  .three:hover .text,
+  .four:hover .text,
+  .five:hover .text {
+    box-shadow: inset rgba(0,0,0,0.6) 170px 100px 40px 10px,
+  rgba(0,0,0,0.6) 0 0px 24px 20px;
   }
   .one:hover .hidden,
   .two:hover .hidden,
   .three:hover .hidden,
   .four:hover .hidden,
   .five:hover .hidden {
-    transform: translateY(-50%);
+    transform: translateY(-70px);
   }
 }
 @media (max-width: 767px) {
@@ -854,15 +872,16 @@ label {
   padding: 15px;
 }
 #bottomnav {
-  width: 70%;
+  width: 75%;
   height: 100%;
   float: left;
   clear: both;
 }
 #logowhite {
-  width: 30%;
+  width: 25%;
   height: 100%;
   float: left;
+  text-align: center;
 }
 #menuone,
 #menutwo,
@@ -870,11 +889,17 @@ label {
   width: 33%;
   height: 100%;
   float: left;
+  text-align: center;
+}
+.container-for-text{
+  display: inline-block;
+  text-align: left;
 }
 #menuone h5,
 #menutwo h5,
 #menuthree h5 {
   padding-top: 20px;
+  text-align: left;
 }
 #menuone h5:first-child,
 #menutwo h5:first-child,
