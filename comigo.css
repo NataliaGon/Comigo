@@ -28,7 +28,7 @@ li {
 * {
   box-sizing: border-box;
 }
-body{
+body {
   overflow-x: hidden;
 }
 a {
@@ -64,16 +64,16 @@ button {
   transition-timing-function: ease-in-out;
   transition-delay: initial;
   cursor: pointer;
-  text-transform: uppercase
+  text-transform: uppercase;
 }
 @media (min-width: 768px) {
-.btn-transform:hover {
-  transform: translateY(-3px);
-  box-shadow: 0px 7px 10px 5px rgba(0, 0, 0, 0.12);
-  z-index: 1;
+  .btn-transform:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 7px 10px 5px rgba(0, 0, 0, 0.12);
+    z-index: 1;
+  }
 }
-}
-main{
+main {
   margin-top: 66px;
 }
 .padding_15 {
@@ -250,7 +250,7 @@ label {
   height: 100%;
   vertical-align: middle;
 }
-.top-banner-content{
+.top-banner-content {
   width: 80%;
   left: 10%;
   text-align: center;
@@ -258,7 +258,7 @@ label {
   vertical-align: middle;
 }
 @media (max-width: 768px) {
-  .top-banner{
+  .top-banner {
     height: 500px;
   }
 }
@@ -452,7 +452,6 @@ label {
   background-size: 50% auto, cover;
   background-repeat: no-repeat, no-repeat;
   position: relative;
- 
 }
 .box2 {
   width: 50%;
@@ -666,7 +665,9 @@ label {
 .bottomleft .icon-youtube {
   font-size: 2vw;
 }
-.bottomright, .right, .topleft{
+.bottomright,
+.right,
+.topleft {
   text-transform: uppercase;
 }
 @media (min-width: 768px) {
@@ -689,12 +690,22 @@ label {
     transform: scale(1.02);
     box-shadow: 0px -2px 24px 2px rgba(0, 0, 0, 0.2);
   }
+  .bottomright{
+    position: relative;
+  }
+  .wrapper-in-bottomright {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    padding: 0 15px;
+  }
 }
 @media (max-width: 767px) {
-  .mosaic-left{
+  .mosaic-left {
     width: 100%;
   }
-  .mosaic{
+  .mosaic {
     height: auto;
   }
   .mosaic-left,
@@ -727,6 +738,9 @@ label {
   .bottomleft .icon-linkedin2,
   .bottomleft .icon-youtube {
     font-size: 2.5rem;
+  }
+  .wrapper-in-bottomright{
+    padding: 15px;
   }
 }
 /*
@@ -833,8 +847,8 @@ label {
   .three:hover .text,
   .four:hover .text,
   .five:hover .text {
-    box-shadow: inset rgba(0,0,0,0.6) 170px 100px 40px 10px,
-  rgba(0,0,0,0.6) 0 0px 24px 20px;
+    box-shadow: inset rgba(0, 0, 0, 0.6) 170px 100px 40px 10px,
+      rgba(0, 0, 0, 0.6) 0 0px 24px 20px;
   }
   .one:hover .hidden,
   .two:hover .hidden,
@@ -865,8 +879,8 @@ label {
   .title-for-blog h1 {
     font-size: 4rem;
   }
-  .hidden{
-    bottom:0;
+  .hidden {
+    bottom: 0;
   }
 }
 /*
@@ -896,7 +910,7 @@ label {
   float: left;
   text-align: center;
 }
-.container-for-text{
+.container-for-text {
   display: inline-block;
   text-align: left;
 }
@@ -935,10 +949,10 @@ label {
   height: 100%;
   float: left;
 }
-.rights h6{
+.rights h6 {
   font-size: 0.55rem;
 }
-.nav-footer-end{
+.nav-footer-end {
   height: 100%;
   float: left;
 }
@@ -1002,13 +1016,13 @@ label {
   .text-block-footer {
     display: inline;
     vertical-align: middle;
-    width:100%;
+    width: 100%;
     line-height: 50px;
   }
-  .footer-end{
+  .footer-end {
     padding: 0 15px;
   }
-  }
+}
 @media (max-width: 767px) {
   .footer-start {
     height: auto;
@@ -1032,7 +1046,7 @@ label {
     text-align: center;
   }
   .nav-footer-end,
-  .social{
+  .social {
     padding-top: 15px;
   }
   .menuone,
