@@ -64,6 +64,7 @@ button {
   transition-timing-function: ease-in-out;
   transition-delay: initial;
   cursor: pointer;
+  text-transform: uppercase
 }
 @media (min-width: 768px) {
 .btn-transform:hover {
@@ -102,7 +103,7 @@ label {
   display: none;
 }
 @media (min-width: 768px) {
-  #header {
+  header {
     width: 100%;
     height: 66px;
     position: fixed;
@@ -137,6 +138,7 @@ label {
   .third-line-nav {
     line-height: 132px;
     text-align: center;
+    text-transform: uppercase;
   }
   .first-line-nav > a:hover {
     color: rgb(241, 72, 72);
@@ -173,7 +175,7 @@ label {
   }
 }
 @media (max-width: 767px) {
-  #header {
+  header {
     width: 100%;
     height: 66px;
     position: fixed;
@@ -248,7 +250,7 @@ label {
   height: 100%;
   vertical-align: middle;
 }
-.top-banner div {
+.top-banner-content{
   width: 80%;
   left: 10%;
   text-align: center;
@@ -273,6 +275,7 @@ label {
 }
 .why h2 {
   color: #696969;
+  text-transform: uppercase;
 }
 .why h4 {
   color: #808080;
@@ -480,6 +483,7 @@ label {
   position: absolute;
   bottom: 6.6rem;
   left: 15%;
+  text-transform: uppercase;
 }
 .box2 h2 {
   color: #505050;
@@ -505,6 +509,7 @@ label {
   width: 100%;
   height: 50vw;
   text-align: center;
+  overflow-x: hidden;
 }
 .whotext {
   width: 40%;
@@ -512,6 +517,7 @@ label {
   background: white;
   vertical-align: middle;
   text-align: center;
+  text-transform: uppercase;
 }
 .whoimg {
   width: 60%;
@@ -548,16 +554,16 @@ label {
 }
 /*
 ******************
-* about-us-social
+* mosaic-social
 ******************
 */
-.about-us {
+.mosaic {
   width: 100%;
   height: 40vw;
   position: relative;
   clear: both;
 }
-.about-us-left {
+.mosaic-left {
   background: #d3d3d3;
   width: 60%;
   height: 50%;
@@ -660,6 +666,9 @@ label {
 .bottomleft .icon-youtube {
   font-size: 2vw;
 }
+.bottomright, .right, .topleft{
+  text-transform: uppercase;
+}
 @media (min-width: 768px) {
   .topleft h2 {
     position: absolute;
@@ -682,13 +691,13 @@ label {
   }
 }
 @media (max-width: 767px) {
-  .about-us-left{
+  .mosaic-left{
     width: 100%;
   }
-  .about-us{
+  .mosaic{
     height: auto;
   }
-  .about-us-left,
+  .mosaic-left,
   .right,
   .topleft,
   .topright,
@@ -751,6 +760,7 @@ label {
 .title-for-blog {
   position: absolute;
   bottom: 15px;
+  text-transform: uppercase;
 }
 .hidden {
   width: 100%;
@@ -870,6 +880,7 @@ label {
   width: 100%;
   height: 250px;
   padding-top: 40px;
+  text-transform: uppercase;
 }
 .logowhite {
   width: 25%;
