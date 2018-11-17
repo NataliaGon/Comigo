@@ -846,7 +846,7 @@ label {
 }
 @media (max-width: 767px) {
   .blog {
-    height: auto;
+    height: 2000px;
   }
   .one,
   .two,
@@ -855,12 +855,12 @@ label {
   .five {
     float: none;
     width: 100%;
-    height: 50vh;
+    height: 16.66%;
   }
   .red {
     float: none;
     width: 100%;
-    height: 200px;
+    height: 16.66%;
   }
   .title-for-blog h1 {
     font-size: 4rem;
